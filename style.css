@@ -1,0 +1,145 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+body {
+    background-image: url(kepek/v3.jpg);
+}   
+
+main{
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    margin: auto;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "h"
+        "n"
+        "a"
+        "f";
+    grid-gap: 10px;
+    background-color: #cfc6b5;
+    margin-top: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5);
+}
+header {
+    grid-area: h;
+    height: 50px;
+    background-color: #506a85;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+nav {
+    grid-area: n;
+}
+article {
+    grid-area: a;
+}
+article, nav {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+footer {
+    grid-area: f;
+    background-color: #506a85;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    color: white;
+}
+ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    padding: 8px;
+    background-color: #ddd;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 0 20px 2px rgba(0, 0, 0, 0.5);
+}
+li a {
+    text-decoration: none;
+    font-weight: 400;
+    color: #506a85;
+    padding: auto;
+}
+article {
+    grid-area: a;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+}
+article .kepek {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+img {
+    border: 8px solid #506a85;
+    width: 100%;
+}
+article .text {
+    color: #456280;
+}
+table {
+    width: 95%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+th {
+    background-color: #506a85;
+    color: white;
+}
+tr:nth-child(even) td {
+    background-color: #f2f2f2;
+}
+tr:nth-child(odd) td {
+    background-color: #dad7d0;
+}
+
+@media (max-width: 1050px) {
+    body {
+        margin: 0;
+    }
+    main{
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "h"
+            "n"
+            "a"
+            "f";
+    }
+
+    ul {
+        grid-template-columns: 1fr;
+    }
+
+    article {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
